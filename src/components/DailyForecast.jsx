@@ -49,9 +49,21 @@ const DailyForecast = () => {
     getWeather();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+  const nextForecast = [];
 
   useEffect(() => {
     getWeatherForecast();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  const test = () => {
+    forecast.list.map((item, index) => (index === 7 || index === 15 || index === 23 || index === 31 || index === 39 ? nextForecast.push([item]) : console.log(nextForecast)));
+    nextForecast.splice(0, 1);
+    console.log(nextForecast);
+  };
+
+  useEffect(() => {
+    test();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -126,16 +138,35 @@ const DailyForecast = () => {
         </Row>
       )}
 
+      {/* {nextForecast.length > 1 && (
+        <Row className="next-forecast justify-content-center g-0">
+          <Col xs={12}>
+            <h2>Next 5 Days</h2>
+            <Carousel show={2.5} slide={3} swiping={true} rightArrow={true} leftArrow={true}>
+              {console.log("riga 151:", nextForecast)}
+              {nextForecast.map((oneday, index) => (
+                <>
+                  <CardCarousel oneday={oneday} icons={icons} index={index} key={index} />
+                </>
+              ))}
+            </Carousel>
+          </Col>
+        </Row>
+      )} */}
+
       {forecast && (
         <Row className="next-forecast justify-content-center g-0">
           <Col xs={12}>
             <h2>Next 5 Days</h2>
-            <Carousel show={2.5} slide={3} swiping={true} swipinp={true} rightArrow={true} leftArrow={true}>
-              {forecast.list.map((oneday, index) => (
-                <>
-                  <CardCarousel oneday={oneday} icons={icons} index={index} />
-                </>
-              ))}
+            <Carousel show={2.5} slide={3} swiping={true} rightArrow={true} leftArrow={true}>
+              {/* {forecast.list.map((oneday, index) =>
+                index === 7 || index === 15 || index === 23 || index === 31 || index === 39 ? <CardCarousel oneday={oneday} icons={icons} index={index} key={index} /> : ""
+              )} */}
+              {forecast.list.map((oneday, index) => {
+                if (index === 7 || index === 15 || index === 23 || index === 31 || index === 39) {
+                  return <CardCarousel oneday={oneday} icons={icons} index={index} key={index} />;
+                }
+              })}
             </Carousel>
           </Col>
         </Row>
