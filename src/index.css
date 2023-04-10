@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+
+/*
+ * Button Custom
+ * ------------------------------------
+ */
+.btn-primary {
+  background-color: #fccf57;
+  border: unset;
+  color: #131440;
+  font-weight: 600;
+  padding: 10px;
+}
+.btn-primary:hover {
+  background-color: transparent;
+  border: 1px solid #fccf57;
+  color: #fccf57;
+}
+.btn-outline-primary {
+  border-color: #fccf57;
+  color: #fccf57;
+  font-weight: 600;
+}
+.btn-outline-primary:hover {
+  background-color: #fccf57;
+  border-color: #fccf57;
+  color: #131440;
+}
+
+/*
+ * Reset
+ * ------------------------------------
+ */
+body {
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #d8dcfd;
+  color: #fff;
+}
+#root {
+  min-height: 100vh;
+  background: linear-gradient(315deg, rgba(19,20,64,1) 0%, rgba(19,20,64,0.9) 33%, rgba(19,20,64,1) 45%);
+  background: linear-gradient(315deg, rgba(19,20,64,1) 50%, rgba(19,20,64,0.9) 60%, rgba(19,20,64,1) 70%);
+  background: rgb(19,20,64);
+  border-radius: 30px;
+}
+h2 {
+  font-size: 15px;
+  letter-spacing: 1px;
+  font-weight: 300;
+  /* margin-bottom: 2rem; */
+  /* margin-top: 1.5rem; */
+}
+
+/*
+ * Homepage
+ * ------------------------------------
+ */
+.hero {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 30px;
+}
+.hero img {
+  width: 70%;
+}
+.hero h1 {
+  margin-bottom: 2rem;
+}
+.hero h1 span {
+  color: #fccf57;
+}
+.hero a {
+  display: block;
+  width: 80%;
+}
+.hero a button {
+  width: 100%;
+}
+
+/*
+ * Search
+ * ------------------------------------
+ */
+.search-page {
+  padding: 30px;
+  /* text-align: center; */
+}
+.search-page h1 {
+  margin-bottom: 2rem;
+}
+.search-page .img-wrapper {
+  width: 80%;
+  margin-inline: auto;
+}
+
+/*
+ * Daily Forecast
+ * ------------------------------------
+ */
+ .main {
+  padding: 30px;
+ }
+.daily-forecast h2,
+.next-forecast h2 {
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+.next-forecast h2 {
+  margin-top: 2rem;
+}
+.daily-forecast h2 span {
+  color: #fccf57;
+}
+.daily-forecast .card,
+.next-forecast .styles-module_item-container__a8zaY {
+  background: rgba(19,20,64,.5);
+  color: #fff;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 300;
+}
+.daily-forecast .card .date > span:first-of-type{
+  font-size: 20px;
+  font-weight: 400;
+}
+.daily-forecast .card .temperature {
+  font-size: 50px;
+  font-weight: 600;
+}
+.daily-forecast .card .temperature span {
+  line-height: 1;
+  
+}
+.daily-forecast .card .temperature .gradeDynamic {
+  margin-right: 0.4rem;
+}
+.daily-forecast .card .temperature .grade {
+  font-size: 20px;
+  color: #fccf57
+}
+.daily-forecast .card .location {
+  font-weight: 300;
+}
+.daily-forecast .card .location .icon {
+  margin-right: 0.4rem;
+}
+.daily-forecast .card .location .name {
+  margin-right: 0.2rem;
+}
+.daily-forecast .card .icon svg {
+  display: block;
+  fill: #fccf57
+}
+.next-forecast .styles-module_item-container__a8zaY {
+  padding: 15px;
+  margin-inline: 5px;
+}
+.next-forecast .styles-module_item-container__a8zaY .text-body .date,
+.next-forecast .styles-module_item-container__a8zaY .text-body .temperature {
+  color: #fff;
+}
+.next-forecast .styles-module_item-container__a8zaY .img-wrapper {
+  width: 70%;
+  margin-left: auto;
+}
+.next-forecast .styles-module_item-container__a8zaY .date {
+  font-size: 15px;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+.next-forecast .styles-module_item-container__a8zaY .temperature {
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+.next-forecast .styles-module_item-container__a8zaY .temperature span {
+  color: #fccf57;
+  font-size: 15px;
+  vertical-align: top;
+}
+/* .carousel-inner {
+  display: flex;
+  flex-wrap: no-wrap;
+  width: 250%;
+}
+.carousel-inner .card {
+  width: 50%;
+}
+.carousel-inner .card .img-wrapper {
+  text-align: right;
+
+}
+.carousel-inner .card img {
+  width: 50%;
+}
+.carousel-inner .card-title {
+  font-size: 15px;
+} */
